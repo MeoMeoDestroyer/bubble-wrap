@@ -6,11 +6,14 @@
 int main() {
   
     bn::core::init();
-    bn::backdrop::set_color(bn::color(21, 15, 15));
+    bn::backdrop::set_color(bn::color(21, 15, 15));// Dark purple
 
     while(true) {
         if (bn::keypad::a_pressed()) {
-    bn::backdrop::set_color(bn::color(31, 21, 22));
+    bn::backdrop::set_color(bn::color(21, 20, 25));// Medium purple  
+    }
+    if (bn::keypad::b_pressed()) {
+        bn::backdrop::set_color(bn::color(21, 20, 30));// Light purple
     }
     bn::core::update();
 }
