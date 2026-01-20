@@ -30,12 +30,16 @@ int main() {
     // bn::sprite_ptr myCircle15 = bn::sprite_items::dot.create_sprite(60, 60);
     bn::vector<bn::sprite_ptr, 10> circles = {};
     bn::vector<bn::sprite_ptr, 10> circles2 = {};
+     bn::vector<bn::sprite_ptr, 10> circles3 = {};
+      bn::vector<bn::sprite_ptr, 10> circles4 = {};
     for(int x = -40; x <= 40; x += 10) {
         BN_LOG("x value", x);
     //bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
     //circles.push_back(myCircle);
     circles.push_back(bn::sprite_items::dot.create_sprite(x, 40));
     circles2.push_back(bn::sprite_items::dot.create_sprite(x, -40));
+    circles3.push_back(bn::sprite_items::dot.create_sprite(-40, x));
+    circles4.push_back(bn::sprite_items::dot.create_sprite(40, x));
 }
 
     bn::backdrop::set_color(bn::color(10, 10, 15));// very Dark purple
