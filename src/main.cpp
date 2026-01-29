@@ -42,8 +42,23 @@ int main() {
     circles4.push_back(bn::sprite_items::dot.create_sprite(40, x));
 }
 
+   //  bn::vector<bn::sprite_ptr, 30> thin_line_vertical = {};
+   // for(int y = -60; y <= 60; y += 5) {
+    //    bn::sprite_ptr line_dot = bn::sprite_items::dot.create_sprite(0, y);
+    //    line_dot.set_horizontal_scale(0.1); // a thin line horizontal scale
+       //  line_dot.set_shear(0.5);
+   //     thin_line_vertical.push_back(line_dot); 
+   // }
+     // get big fat error because too many sprites on screen, so fix it a little
+      for(int i = 0; i < 3 && i < circles2.size(); i++) {
+        circles2[i].set_shear(0.5);
+      }
+           for(int i = circles.size() - 3; i < circles.size(); i++) {
+        circles[i].set_shear(0.5);
+    }
+    
     bn::backdrop::set_color(bn::color(10, 10, 15));// very Dark purple
-
+   // circles[0].set_scale(1.8);
     while(true) {
     if (bn::keypad::a_held()) {
             bn::backdrop::set_color(bn::color(21, 20, 25));// Medium purple  
